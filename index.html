@@ -9,9 +9,16 @@
   </head>
   <body>
     <section class="header" style="background-color: #f4f4f4">
-      <button class="burger-btn"></button>
+      <div class="burger-btn">
+        <input
+          class="burger-btn__input"
+          type="checkbox"
+          id="burger-btn__input"
+        />
+        <label for="burger-btn__input" class="burger-btn__label"></label>
+      </div>
 
-      <ul class="header__nav header__nav_desktop">
+      <ul class="header__nav">
         <li>
           <a href="#coatings" class="header__nav-el">Покрытия и градиенты</a>
         </li>
@@ -19,9 +26,9 @@
         <li><a href="#training" class="header__nav-el">Тренировки</a></li>
       </ul>
 
-      <div class="toggle">
-        <input class="toggle_input" type="checkbox" id="toggle" />
-        <label class="toggle__label" for="toggle"></label>
+      <div class="toggle toggle_dark">
+        <input class="toggle__input" type="checkbox" id="toggle" />
+        <label class="toggle__label toggle__label_dark" for="toggle"></label>
       </div>
     </section>
   </body>

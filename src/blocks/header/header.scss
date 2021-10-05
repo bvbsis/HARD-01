@@ -1,0 +1,16 @@
+.header {
+  &__nav {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+  }
+
+  &__nav-el {
+    display: block;
+    margin-bottom: 32px;
+    color: $color--l-m;
+    text-decoration: none;
+    max-width: 220px;
+  }
+  
+}
