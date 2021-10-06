@@ -3,12 +3,13 @@
   width: 44px;
   height: 24px;
   position: relative;
-  margin: 0 0 0 50px;
+  padding: 0 41px 0 50px;
 
   &::before {
     content: '';
     position: absolute;
-    right: 66px;
+    right: 106px;
+    top: -2px;
     width: 28px;
     height: 28px;
     background-image: url(../src/images/sun-icon-light.svg);
@@ -21,7 +22,7 @@
     content: '';
     position: absolute;
     top: 2.32px;
-    left: 66px;
+    left: 116px;
     width: 19.35px;
     height: 19.35px;
     background-image: url(../src/images/moon-icon-light.svg);
@@ -38,6 +39,10 @@
     background-image: url(../src/images/moon-icon-dark.svg);
   }
 
+  &_closed {
+    display: none;
+  }
+
   &__label {
     position: relative;
     display: block;
@@ -46,7 +51,7 @@
     border-radius: 15px;
     cursor: pointer;
     background-color: white;
-    
+
     &::after {
       position: absolute;
       top: 2px;
@@ -60,21 +65,22 @@
       transition: background 200ms linear,
         left 200ms ease-in-out 100ms;
     }
-  
+
     &_dark {
       background-color: #545454;
     }
   }
-  
+
   &__input {
     display: none;
-  
+
     &:checked {
       ~ .toggle__label::after {
         left: 22px;
       }
   }
   }
+
 
 }
 

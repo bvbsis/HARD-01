@@ -1,0 +1,41 @@
+.intro {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  &__heading {
+    margin-left: 18px;
+    margin-top: 38px;
+  }
+
+  &__image {
+    margin: 40px 0 0 14.5%;
+
+    width: 80%;
+  }
+
+  &__bike-fix {
+    position: absolute;
+    top: 41.5%;
+    border-radius: 20px;
+    background-color: $color--bg--l-m;
+    background-image: url(../../src/images/bike-fix.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 80%;
+    width: 73%;
+    box-sizing: border-box;
+    padding-top: 50%;
+    margin-left: 5.6%;
+  }
+
+  &__text {
+    margin-top: 38px;
+    margin-left: 18px;
+  }
+
+  &__button {
+    position: relative;
+    margin: 41px auto 40px;
+  }
+}

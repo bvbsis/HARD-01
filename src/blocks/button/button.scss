@@ -1,0 +1,50 @@
+.button {
+  padding: 0;
+  border: none;
+  background-color: $color--accent;
+  color: white;
+  border-radius: 4px;
+  z-index: 200;
+  overflow: hidden;
+
+  &_mobile {
+    width: 284px;
+    height: 46px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 146%;
+    letter-spacing: 1px;
+  }
+
+  &:hover {
+    background-color: transparent;
+  }
+
+  &::after {
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: -100%;
+    background-color: $color--accent-selec;
+    transition: all 300ms ease-in-out;
+    z-index: -10;
+  }
+
+  &:hover::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: $color--accent;
+    z-index: -10;
+  }
+
+  &:hover::after {
+    left: 0;
+  }
+}

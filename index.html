@@ -7,9 +7,9 @@
     <link rel="stylesheet" href="./less/style.css" />
     <title>HARD-01</title>
   </head>
-  <body>
-    <section class="header" style="background-color: #f4f4f4">
-      <div class="burger-btn">
+  <body class="page">
+    <section class="header header_closed" style="background-color: #f4f4f4">
+      <div class="burger-btn header__burger-btn">
         <input
           class="burger-btn__input"
           type="checkbox"
@@ -19,17 +19,33 @@
       </div>
 
       <ul class="header__nav">
-        <li>
-          <a href="#coatings" class="header__nav-el">Покрытия и градиенты</a>
+        <li class="header__nav-el">
+          <a href="#coatings">Покрытия и градиенты</a>
         </li>
-        <li><a href="#bikes" class="header__nav-el">Велосипеды</a></li>
-        <li><a href="#training" class="header__nav-el">Тренировки</a></li>
+        <li class="header__nav-el"><a href="#bikes">Велосипеды</a></li>
+        <li class="header__nav-el"><a href="#training">Тренировки</a></li>
       </ul>
-
-      <div class="toggle toggle_dark">
-        <input class="toggle__input" type="checkbox" id="toggle" />
-        <label class="toggle__label toggle__label_dark" for="toggle"></label>
+      <div class="header__inner">
+        <div class="toggle toggle_closed toggle_dark header__toggle">
+          <input class="toggle__input" type="checkbox" id="toggle" />
+          <label class="toggle__label .toggle__label_dark" for="toggle"></label>
+        </div>
       </div>
     </section>
+    <main class="content">
+      <section class="intro">
+        <h1 class="intro__heading section-heading section-heading_mobile">
+          Шоссе, ТТ и&nbsp;Грэвел
+        </h1>
+        <img src="./src/images/intro-image.png" class="intro__image" alt="Обложка" />
+        <div class="intro__bike-fix"></div>
+        <p class="intro__text section-text section-text_mobile">
+          Триатлонные старты, горные серпантины или грейвел заезды
+          по&nbsp;живописным маршрутам&nbsp;&mdash; нужно только определиться
+          с&nbsp;выбором велосипеда и&nbsp;отправиться в&nbsp;путь.
+        </p>
+        <button class="intro__button button button_mobile">Подробнее</button>
+      </section>
+    </main>
   </body>
 </html>

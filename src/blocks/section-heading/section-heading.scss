@@ -1,0 +1,13 @@
+.section-heading {
+
+  &_mobile {
+    margin: 0;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 1.25;
+    letter-spacing: -0.5px;
+    color: $color--l-m;
+  }
+}

@@ -1,16 +1,58 @@
 .header {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+
+  &_closed {
+    height: 74px;
+    overflow: hidden;
+  }
+
   &__nav {
+    margin: 0;
+    padding: 0;
     display: flex;
+    align-items: center;
     flex-direction: column;
     list-style: none;
+    font-weight: 500;
+    text-align: center;
+    font-size: 18px;
   }
 
   &__nav-el {
     display: block;
-    margin-bottom: 32px;
+    margin-bottom: 31px;
     color: $color--l-m;
-    text-decoration: none;
     max-width: 220px;
+
+    &:first-child {
+      margin-top: 100px;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
   }
-  
+
+  &__burger-btn {
+    margin: 24px 18px 0 0;
+    align-self: flex-end;
+  }
+
+  &__inner {
+    position: absolute;
+    bottom: 30px;
+    left: calc(50vw - 67.5px);
+  }
+
+  // @media screen and (min-width: 768px) {
+  //   height: ;
+  // }
+
 }
