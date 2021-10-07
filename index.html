@@ -37,7 +37,11 @@
         <h1 class="intro__heading section-heading section-heading_mobile">
           Шоссе, ТТ и&nbsp;Грэвел
         </h1>
-        <img src="./src/images/intro-image.png" class="intro__image" alt="Обложка" />
+        <img
+          src="./src/images/intro-image.png"
+          class="intro__image"
+          alt="Обложка"
+        />
         <div class="intro__bike-fix"></div>
         <p class="intro__text section-text section-text_mobile">
           Триатлонные старты, горные серпантины или грейвел заезды
@@ -46,6 +50,79 @@
         </p>
         <button class="intro__button button button_mobile">Подробнее</button>
       </section>
+
+      <section class="tip">
+        <div class="section-line"></div>
+        <img
+          src="./src/images/tip-image.png"
+          alt="Горная дорога"
+          class="tip__image"
+        />
+        <h3 class="tip__heading">
+          &laquo;Катайся много или мало, долго или коротко, как
+          хочешь&nbsp;- но&nbsp;катайся&raquo;
+        </h3>
+        <p class="tip__author">Эдди Меркс</p>
+        <p class="tip__authors-activity">Велогонщик</p>
+      </section>
+
+      <section class="coatings">
+        <div class="section-line"></div>
+
+        <h2 class="section-heading section-heading_mobile coatings__heading">Шоссе</h2>
+
+        <button
+          class="arrow-button coatings__button"
+        ></button
+        ><button class="arrow-button arrow-button_reverse coatings__button"></button>
+
+        <div class="coatings__inner">
+          <img src="./src/images/black-road.png" alt="Асфальтовая дорога" class="coatings__image">
+        </div>
+
+        <p class="section-text section-text_mobile coatings__text">
+          На шоссейном велосипеде можно ездить по асфальту на разных градиентах:
+          будь то горы или равнины. Гонки проходят в командном пелотоне, но
+          тренироваться можно и самостоятельно.
+        </p>
+      </section>
+
+      <section class="training">
+        <div class="section-line"></div>
+        <h2 class="section-heading section-heading_mobile training__heading">
+          Тренировки
+        </h2>
+        <img
+          src="./src/images/training-image.png"
+          alt="Дорога в лесу"
+          class="training__image"
+        />
+        <p class="section-text section-text_mobile training__text">
+          Чтобы найти маршрут для тренировки можно воспользоваться сервисом
+          Komoot, а&nbsp;записать эти тренировки поможет приложение Strava,
+          а&nbsp;также это приложение позволит построить тренировочный план.
+        </p>
+        <ul class="training__inner">
+          <li class="training__link">
+            <a href="https://www.strava.com">Strava</a>
+          </li>
+          <li class="training__link">
+            <a href="https://www.komoot.com">Komoot</a>
+          </li>
+        </ul>
+      </section>
     </main>
+
+    <footer class="footer">
+      <h3 class="footer__heading">Подпишитесь на рассылку &mdash;</h3>
+      <form class="footer__form" action="">
+        <input class="footer__input" type="text" placeholder="Ваш e-mail" />
+        <button type="submit" class="footer__submit">ok</button>
+      </form>
+      <div class="footer__inner">
+        <p class="footer__license">&copy;&nbsp;Road Club 2021</p>
+        <div class="footer__logo"></div>
+      </div>
+    </footer>
   </body>
 </html>

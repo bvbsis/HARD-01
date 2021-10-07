@@ -1,0 +1,28 @@
+.arrow-button {
+  padding: 0;
+  width: 24px;
+  height: 24px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(235, 235, 235, 1);
+
+  &_reverse {
+    transform: rotate(180deg);
+    right: 52px !important;
+  }
+
+  &::before {
+    content: "";
+    height: 24px;
+    width: 24px;
+    background-image: url(../../src/images/arrow-left.svg);
+    background-repeat: no-repeat;
+    background-size: 6px 12px;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    left: 1px;
+    z-index: 100;
+
+  }
+}
