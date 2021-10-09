@@ -4,11 +4,15 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./less/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="./styles/style.css" />
     <title>HARD-01</title>
   </head>
-  <body class="page">
-    <section class="header header_closed" style="background-color: #f4f4f4">
+  <body class="page .page_dark">
+    <header class="header header_closed">
       <div class="burger-btn header__burger-btn">
         <input
           class="burger-btn__input"
@@ -31,7 +35,8 @@
           <label class="toggle__label .toggle__label_dark" for="toggle"></label>
         </div>
       </div>
-    </section>
+    </header>
+
     <main class="content">
       <section class="intro">
         <h1 class="intro__heading section-heading section-heading_mobile">
@@ -59,8 +64,8 @@
           class="tip__image"
         />
         <h3 class="tip__heading">
-          &laquo;Катайся много или мало, долго или коротко, как
-          хочешь&nbsp;- но&nbsp;катайся&raquo;
+          &laquo;Катайся много или мало, долго или коротко, как хочешь&nbsp;-
+          но&nbsp;катайся&raquo;
         </h3>
         <p class="tip__author">Эдди Меркс</p>
         <p class="tip__authors-activity">Велогонщик</p>
@@ -69,22 +74,151 @@
       <section class="coatings">
         <div class="section-line"></div>
 
-        <h2 class="section-heading section-heading_mobile coatings__heading">Шоссе</h2>
+        <button class="arrow-button coatings__button"></button
+        ><button
+          class="arrow-button arrow-button_reverse coatings__button"
+        ></button>
 
-        <button
-          class="arrow-button coatings__button"
-        ></button
-        ><button class="arrow-button arrow-button_reverse coatings__button"></button>
+        <div class="coatings__inner coatings__inner_highway">
+          <h2 class="section-heading section-heading_mobile coatings__heading">
+            Шоссе
+          </h2>
 
-        <div class="coatings__inner">
-          <img src="./src/images/black-road.png" alt="Асфальтовая дорога" class="coatings__image">
+          <div class="coatings__image-container">
+            <div class="coatings__heights coatings__heights_type_high"></div>
+            <img
+              src="./src/images/black-road.png"
+              alt="Асфальтовая дорога"
+              class="coatings__image"
+            />
+            <img
+              src="./src/images/forest-road.png"
+              alt="Дорога в лесу"
+              class="coatings__image"
+            />
+          </div>
+
+          <p class="section-text section-text_mobile coatings__text">
+            На&nbsp;шоссейном велосипеде можно ездить по&nbsp;асфальту
+            на&nbsp;разных градиентах: будь&nbsp;то горы или равнины. Гонки
+            проходят в&nbsp;командном пелотоне, но&nbsp;тренироваться можно
+            и&nbsp;самостоятельно.
+          </p>
         </div>
 
-        <p class="section-text section-text_mobile coatings__text">
-          На шоссейном велосипеде можно ездить по асфальту на разных градиентах:
-          будь то горы или равнины. Гонки проходят в командном пелотоне, но
-          тренироваться можно и самостоятельно.
-        </p>
+        <div class="coatings__inner coatings__inner_gravel">
+          <h2 class="section-heading section-heading_mobile coatings__heading">
+            Грэвел
+          </h2>
+
+          <div class="coatings__image-container">
+            <div class="coatings__heights coatings__heights_type_mid"></div>
+            <img
+              src="./src/images/forest-road.png"
+              alt="Асфальтовая дорога"
+              class="coatings__image"
+            />
+            <img
+              src="./src/images/highway-road.png"
+              alt="Дорога в лесу"
+              class="coatings__image"
+            />
+          </div>
+
+          <p class="section-text section-text_mobile coatings__text">
+            Грэвел похож на&nbsp;шоссейный велосипед, но&nbsp;конструкция рамы
+            немного отличается, и&nbsp;на&nbsp;нём стоят более широкие покрышки,
+            всё для того чтобы проехать по&nbsp;лёгкому бездорожью.
+          </p>
+        </div>
+
+        <div class="coatings__inner coatings__inner_tt">
+          <h2 class="section-heading section-heading_mobile coatings__heading">
+            ТТ
+          </h2>
+
+          <div class="coatings__image-container">
+            <div class="coatings__heights coatings__heights_type_low"></div>
+            <img
+              src="./src/images/highway-road.png"
+              alt="Асфальтовая дорога"
+              class="coatings__image"
+            />
+            <img
+              src="./src/images/black-road.png"
+              alt="Дорога в лесу"
+              class="coatings__image"
+            />
+          </div>
+
+          <p class="section-text section-text_mobile coatings__text">
+            ТТ&nbsp;&mdash; это велосипед для триатлона или раздельного старта,
+            гооняют на таком велике только по&nbsp;равнинному асфальту, велик
+            очень быстрые и аэродинамичный.
+          </p>
+        </div>
+      </section>
+
+      <section class="bikes">
+        <div class="section-line"></div>
+
+        <h2 class="section-heading section-heading_mobile bikes__heading">
+          Велосипеды
+        </h2>
+
+        <div class="bikes__select-container">
+          <select class="select bikes__select">
+            <option value="highway" class="select__option">Шоссе</option>
+            <option value="gravel" class="select__option">Грэвел</option>
+            <option value="tt" class="select__option">ТТ</option>
+          </select>
+        </div>
+
+        <div class="bikes__slider">
+          <ul class="bikes__slider-wrapper swiper-wrapper">
+            <li class="bikes__slide swiper-slide">
+              <a
+                href="https://www.sigmasports.com/item/Cervelo/Caledonia-5-Ultegra-Disc-Road-Bike-2021/RDEN"
+                class="bikes__link"
+                ><img
+                  src="./src/images/Cervelo-Caledonia-5.png"
+                  alt="Фото байка"
+                  class="bikes__slide-image"
+                />
+                <h3 class="bikes__slide-heading">Cervelo Caledonia-5</h3></a
+              >
+            </li>
+
+            <li class="bikes__slide swiper-slide">
+              <a
+                href="https://www.sigmasports.com/item/Cannondale/SystemSix-HiMOD-Ultegra-Di2-Disc-Road-Bike-2021/R82J"
+                class="bikes__link"
+                ><img
+                  src="./src/images/Cannondale-Systemsix-Himod.png"
+                  alt="Фото байка"
+                  class="bikes__slide-image"
+                />
+                <h3 class="bikes__slide-heading">
+                  Cannondale Systemsix Himod
+                </h3></a
+              >
+            </li>
+
+            <li class="bikes__slide swiper-slide">
+              <a
+                href="https://www.sigmasports.com/item/Trek/Domane-SL-7-Force-eTap-AXS-Disc-Road-Bike-2021/RULF"
+                class="bikes__link"
+                ><img
+                  src="./src/images/Trek-Domane-SL-7.png"
+                  alt="Фото байка"
+                  class="bikes__slide-image"
+                />
+                <h3 class="bikes__slide-heading">Trek Domane SL-7</h3></a
+              >
+            </li>
+          </ul>
+          <div class="bikes__pagination"></div>
+        </div>
       </section>
 
       <section class="training">
@@ -114,15 +248,103 @@
     </main>
 
     <footer class="footer">
-      <h3 class="footer__heading">Подпишитесь на рассылку &mdash;</h3>
+      <h3 class="footer__heading">Подпишитесь на рассылку&nbsp;&mdash;</h3>
+
       <form class="footer__form" action="">
         <input class="footer__input" type="text" placeholder="Ваш e-mail" />
         <button type="submit" class="footer__submit">ok</button>
       </form>
+
       <div class="footer__inner">
         <p class="footer__license">&copy;&nbsp;Road Club 2021</p>
         <div class="footer__logo"></div>
       </div>
     </footer>
+
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script src="./src/scripts/script.js"></script>
+    <script src="./src/scripts/newFile.js"></script>
   </body>
 </html>
+
+
+
+<li class="bikes__slide swiper-slide">
+  <a
+    href="https://www.sigmasports.com/item/Cervelo/Aspero-GRX-810-1x-Disc-Gravel-Bike-2021/RJDE"
+    class="bikes__link"
+    ><img
+      src="./src/images/Cervelo-Aspero-GRX-810.png"
+      alt="Фото байка"
+      class="bikes__slide-image"
+    />
+    <h3 class="bikes__slide-heading">Cervelo Aspero GRX 810</h3></a
+  >
+</li>
+
+<li class="bikes__slide swiper-slide">
+  <a
+    href="https://www.sigmasports.com/item/Specialized/S-Works-Diverge-Gravel-Bike-2020/NVJ9"
+    class="bikes__link"
+    ><img
+      src="./src/images/Specialized-S-Works-Diverge.png"
+      alt="Фото байка"
+      class="bikes__slide-image"
+    />
+    <h3 class="bikes__slide-heading">Specialized S-Works Diverge</h3></a
+  >
+</li>
+
+<li class="bikes__slide swiper-slide">
+  <a
+    href="https://www.sigmasports.com/item/Cannondale/Topstone-Carbon-Lefty-3-Disc-Gravel-Road-Bike-2021/PUC8"
+    class="bikes__link"
+    ><img
+      src="./src/images/Cannondale-Topstone-Lefty-3.png"
+      alt="Фото байка"
+      class="bikes__slide-image"
+    />
+    <h3 class="bikes__slide-heading">Cannondale Topstone Lefty 3</h3></a
+  >
+</li>
+
+
+
+<li class="bikes__slide swiper-slide">
+  <a
+    href="https://www.sigmasports.com/item/Specialized/S-Works-Shiv-Disc-Limited-Edition-Triathlon-Bike-2019/K8P9 "
+    class="bikes__link"
+    ><img
+      src="./src/images/Specialized-S-Works-Shiv.png"
+      alt="Фото байка"
+      class="bikes__slide-image"
+    />
+    <h3 class="bikes__slide-heading">Specialized S-Works Shiv</h3></a
+  >
+</li>
+
+<li class="bikes__slide swiper-slide">
+  <a
+    href="https://www.sigmasports.com/item/BMC/Timemachine-01-One-Force-Disc-TT-Triathlon-Bike-2021/S835"
+    class="bikes__link"
+    ><img
+      src="./src/images/BMC-Timemachine-01-ONE.png"
+      alt="Фото байка"
+      class="bikes__slide-image"
+    />
+    <h3 class="bikes__slide-heading">BMC Timemachine 01 ONE</h3></a
+  >
+</li>
+
+<li class="bikes__slide swiper-slide">
+  <a
+    href="https://www.sigmasports.com/item/Cervelo/P-Series-Ultegra-Di2-TT-Triathlon-Bike-2021/RM6Q"
+    class="bikes__link"
+    ><img
+      src="./src/images/Cervelo-P-Series.png"
+      alt="Фото байка"
+      class="bikes__slide-image"
+    />
+    <h3 class="bikes__slide-heading">Cervelo P-Series</h3></a
+  >
+</li>

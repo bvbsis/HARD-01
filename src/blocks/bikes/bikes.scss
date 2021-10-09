@@ -1,0 +1,105 @@
+.bikes {
+  overflow: hidden;
+  padding: 40px 18px 48px;
+
+  &__heading {
+    margin: 40px 0 0;
+  }
+
+  &__select-container {
+    display: inline-block;
+    margin: 40px 0 4px;
+    position: relative;
+
+
+    &::before {
+      content: "";
+      position: absolute;
+      right: 11px;
+      top: 12px;
+      background-image: url(../src/images/select-arrow.svg);
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: 12px;
+      height: 7px;
+      z-index: -5;
+    }
+  }
+
+  &__select {
+    min-width: 114px;
+    height: 30px;
+    border-radius: 2px;
+    border: 1px solid #e3e3e3;
+    background-color: transparent;
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 1.27;
+    appearance: none;
+    cursor: pointer;
+    color: inherit;
+    padding: 5px 0 5px 11px;
+  }
+
+  &__link {
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  &__pagination {
+    max-width: fit-content;
+    margin: auto;
+
+  }
+
+  &__bullet{
+    margin: 0 5px 6px 0;
+    width: 4px;
+    height: 4px;
+    display: inline-block;
+    border-radius: 100%;
+    background-color: rgba(202, 202, 202, 1);
+    margin-right: 5px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &_active {
+      background: rgba(21, 21, 21, 1);
+    }
+  }
+
+  &__slider-wrapper {
+    list-style: none;
+    padding: 0;
+  }
+
+  &__slide {
+    background-color: #fff;
+    border-radius: 7%;
+    padding: 5%;
+    box-sizing: border-box;
+    box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.06);
+    transition: box-shadow 200ms ease;
+
+    &:hover {
+      box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.11);
+    }
+  }
+
+  &__slide-image {
+    max-width: 100%;
+  }
+
+  &__slide-heading {
+    margin: 4px 0 0;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 1.29;
+  }
+}

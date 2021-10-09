@@ -4,4 +4,9 @@
   background-color: $color--bg--l-m;
   max-width: 1440px;
   margin: auto;
+
+  &_dark {
+    color: $color--d-m;
+    background-color: $color--bg--d-m;
+  }
 }
