@@ -16,6 +16,11 @@
     align-self: flex-end;
   }
 
+  &__inner {
+    display: none;
+    height: 0;
+  }
+
   &__bike-fix {
     position: absolute;
     top: 47%;
@@ -30,7 +35,6 @@
     padding-top: 50%;
 
     box-shadow: -20px 60px 220px 0px rgba(0, 0, 0, 0.44);
-
   }
 
   &__text {
@@ -40,5 +44,84 @@
   &__button {
     align-self: center;
     margin: 41px 0 0;
+  }
+
+  @media screen and (min-width: 600px) {
+    display: grid;
+    grid-template-columns: 53.8% 46.2%;
+    padding: 12% 0 0 8.3%;
+
+    &__text {
+      max-width: 60%;
+    }
+
+    &__heading {
+      max-width: 60%;
+    }
+
+    &__image {
+      grid-row: 1/6;
+      align-items: start;
+      grid-column: 2;
+      margin: 0;
+      width: 100%;
+    }
+
+    &__button {
+      align-self: start;
+      margin: 7.7% 0 0;
+      grid-column: 1;
+      grid-row: 3;
+      height: 50px;
+      width: 180px;
+    }
+
+    &__inner {
+      display: flex;
+      margin: 23.6% 0 0;
+      height: fit-content;
+      align-items: center;
+    }
+
+    &__bike-name {
+      margin: 0 4% 0 0;
+      font-size: 18px;
+    }
+
+    &__line {
+      width: 19%;
+      height: 2px;
+      background-color: rgba(215, 212, 212, 1);
+    }
+
+    &__bike-fix {
+      top: 60%;
+      width: 30.2%;
+      left: 44%;
+      padding-top: 20.7%;
+    }
+  }
+
+  @media screen and (min-width: 1023px) {
+    padding: 6.5% 0 0 8.3%;
+
+    &__heading {
+      font-weight: bold;
+      font-size: 55px;
+      line-height: 1.09;
+      letter-spacing: -0.5px;
+      margin-top: 8.8%;
+    }
+
+    &__text {
+      margin: 6% 0 0;
+      grid-column: 1;
+      grid-row: 2;
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 1.56;
+      color: #222222;
+      opacity: 0.7;
+    }
   }
 }

@@ -1,6 +1,9 @@
 .coatings {
   position: relative;
-  padding: 0 18px 40px;
+  padding: 40px 18px;
+  max-width: 1440px;
+  box-sizing: border-box;
+  margin: auto;
 
   &__heading {
     margin: 40px 0 0;
@@ -10,13 +13,15 @@
     height: 28px;
     width: 68px;
     position: absolute;
+    background-size: contain;
     left: 0;
     top: 80.5%;
     background-image: url(../src/images/green-rectangle.svg);
     background-repeat: no-repeat;
 
     &_type {
-      &_high::after{
+      &_high::after {
+        background-size: contain;
         background-image: url(../src/images/high-line-vector.svg);
         top: 8px;
       }
@@ -30,7 +35,6 @@
         background-image: url(../src/images/low-line-vector.svg);
         top: 12px;
       }
-
     }
 
     &::after {
@@ -55,7 +59,7 @@
 
   &__image {
     margin: 40px 18px 0 0;
-    width: 100%;
+    max-width: 100%;
 
     &:last-child {
       margin: 40px 0 0;
@@ -68,7 +72,96 @@
 
   &__button {
     position: absolute;
+    z-index: 100;
     right: 18px;
-    top: 48px;
+    top: 87px;
+
+    &_reverse {
+      transform: rotate(180deg);
+      right: 52px;
+    }
+  }
+
+  @media screen and (min-width: 560px) {
+    padding: 60px 0 60px 8.3%;
+
+    &__inner {
+      display: grid;
+    }
+
+    &__heading {
+      grid-column: 1;
+      grid-row: 1;
+      font-weight: bold;
+      font-size: 55px;
+      line-height: 1.09;
+      letter-spacing: -0.5px;
+      margin: 54px 0 0;
+    }
+
+    &__text {
+      grid-column: 1;
+      grid-row: 2;
+      max-width: 460px;
+      font-size: 18px;
+      line-height: 1.56;
+      margin: 45px 0 0;
+    }
+
+    &__image-container {
+      grid-column: 1;
+      grid-row: 3;
+      margin: 84px 0 0;
+    }
+
+    &__image {
+      margin: 0 40px 0 0;
+      max-width: 650px;
+
+      &:last-child {
+        margin: 0;
+      }
+    }
+
+    &__heights {
+      top: 85.7%;
+      height: 40px;
+      width: 100px;
+
+      &_type {
+        &_high::after{
+          top: 13px;
+          left: 14px;
+          width: 50px;
+          height: 16px;
+        }
+
+        &_mid::after{
+          top: 16px;
+          left: 14px;
+          width: 50px;
+          height: 16px;
+        }
+
+        &_low::after{
+          top: 18px;
+          left: 14px;
+          width: 50px;
+          height: 16px;
+        }
+
+      }
+    }
+
+    &__button {
+      top: 98.7%;
+      left: calc(8.3% + 70px);
+      right: auto;
+
+      &_reverse {
+        right: auto;
+        left: 8.3%;
+      }
+    }
   }
 }

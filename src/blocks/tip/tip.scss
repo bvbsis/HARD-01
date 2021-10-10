@@ -1,5 +1,5 @@
 .tip {
-  padding: 40px 18px;
+  padding: 40px 18px 0;
 
   &__image {
     width: 100%;
@@ -27,5 +27,48 @@
     line-height: 1.6;
     color: #222222;
     opacity: 0.7;
+  }
+
+  @media screen and (min-width: 870px) {
+    display: grid;
+    grid-template-columns: 49.2% 50.8%;
+    padding: 7% 0 0 8.3%;
+
+    &__image {
+      grid-row: 1/4;
+    }
+
+    &__heading {
+      margin: 3.2% 0 0 12%;
+      max-width: 530px;
+    }
+
+    &__author {
+      margin: 37% 0 0 12%;
+    }
+
+    &__authors-activity {
+      margin: 0 0 0 12%;
+    }
+  }
+
+  @media screen and (min-width: 1290px) {
+    &__authors-activity {
+      font-size: 16px;
+      line-height: 1.75;
+    }
+
+    &__author {
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 1.6;
+    }
+
+    &__heading {
+      font-weight: 600;
+      font-size: 34px;
+      line-height: 1.29;
+      letter-spacing: -0.5px;
+    }
   }
 }

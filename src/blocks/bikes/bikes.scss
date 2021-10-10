@@ -1,6 +1,6 @@
 .bikes {
   overflow: hidden;
-  padding: 40px 18px 48px;
+  padding: 40px 5.6% 48px;
 
   &__heading {
     margin: 40px 0 0;
@@ -10,7 +10,6 @@
     display: inline-block;
     margin: 40px 0 4px;
     position: relative;
-
 
     &::before {
       content: "";
@@ -41,8 +40,16 @@
     padding: 5px 0 5px 11px;
   }
 
+  &__navigation {
+    display: none;
+    height: 0;
+  }
+
+  &__nav-element {
+    display: none;
+  }
+
   &__link {
-    min-width: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -53,10 +60,9 @@
   &__pagination {
     max-width: fit-content;
     margin: auto;
-
   }
 
-  &__bullet{
+  &__bullet {
     margin: 0 5px 6px 0;
     width: 4px;
     height: 4px;
@@ -93,7 +99,7 @@
   }
 
   &__slide-image {
-    max-width: 100%;
+    width: 100%;
   }
 
   &__slide-heading {
@@ -101,5 +107,73 @@
     font-weight: 600;
     font-size: 14px;
     line-height: 1.29;
+  }
+
+  @media screen and (min-width: 750px) {
+    padding: 11% 8.4%;
+
+    &__heading {
+      margin: 0;
+      font-weight: bold;
+      font-size: 55px;
+      line-height: 1.09;
+      letter-spacing: -0.5px;
+    }
+
+    &__heading-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 110px;
+    }
+
+    &__select-container {
+      display: none;
+      height: 0;
+    }
+
+    &__select {
+      display: none;
+      height: 0;
+    }
+
+    &__navigation {
+      margin-top: 30px;
+      padding: 0;
+      display: flex;
+      height: initial;
+    }
+
+    &__nav-element {
+      display: initial;
+      margin-right: 40px;
+      font-size: 18px;
+      line-height: 1.56;
+
+      &_active {
+        font-weight: 600;
+      }
+
+      &:last-child {
+        margin: 0;
+      }
+    }
+
+    &__bullet {
+      display: none;
+    }
+
+    &__slide {
+      padding: 2%;
+    }
+
+    &__slide-heading {
+      position: absolute;
+      top: 104%;
+      left: 1%;
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 1.22;
+    }
   }
 }

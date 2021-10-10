@@ -12,7 +12,7 @@
     <title>HARD-01</title>
   </head>
   <body class="page .page_dark">
-    <header class="header header_closed">
+    <header class="header .header_opened">
       <div class="burger-btn header__burger-btn">
         <input
           class="burger-btn__input"
@@ -39,21 +39,23 @@
 
     <main class="content">
       <section class="intro">
-        <h1 class="intro__heading section-heading section-heading_mobile">
-          Шоссе, ТТ и&nbsp;Грэвел
-        </h1>
+        <h1 class="intro__heading section-heading">Шоссе, ТТ и&nbsp;Грэвел</h1>
         <img
           src="./src/images/intro-image.png"
           class="intro__image"
           alt="Обложка"
         />
         <div class="intro__bike-fix"></div>
-        <p class="intro__text section-text section-text_mobile">
+        <p class="intro__text section-text">
           Триатлонные старты, горные серпантины или грейвел заезды
           по&nbsp;живописным маршрутам&nbsp;&mdash; нужно только определиться
           с&nbsp;выбором велосипеда и&nbsp;отправиться в&nbsp;путь.
         </p>
-        <button class="intro__button button button_mobile">Подробнее</button>
+        <button class="intro__button button">Подробнее</button>
+        <div class="intro__inner">
+          <p class="intro__bike-name">Cannondale Systemsix</p>
+          <div class="intro__line"></div>
+        </div>
       </section>
 
       <section class="tip">
@@ -71,18 +73,16 @@
         <p class="tip__authors-activity">Велогонщик</p>
       </section>
 
-      <section class="coatings">
+      <section class="coatings" id="coatings">
         <div class="section-line"></div>
 
         <button class="arrow-button coatings__button"></button
         ><button
-          class="arrow-button arrow-button_reverse coatings__button"
+          class="arrow-button coatings__button coatings__button_reverse"
         ></button>
 
         <div class="coatings__inner coatings__inner_highway">
-          <h2 class="section-heading section-heading_mobile coatings__heading">
-            Шоссе
-          </h2>
+          <h2 class="section-heading coatings__heading">Шоссе</h2>
 
           <div class="coatings__image-container">
             <div class="coatings__heights coatings__heights_type_high"></div>
@@ -98,73 +98,31 @@
             />
           </div>
 
-          <p class="section-text section-text_mobile coatings__text">
-            На&nbsp;шоссейном велосипеде можно ездить по&nbsp;асфальту
-            на&nbsp;разных градиентах: будь&nbsp;то горы или равнины. Гонки
-            проходят в&nbsp;командном пелотоне, но&nbsp;тренироваться можно
+          <p class="section-text coatings__text">
+            На&nbsp;шоссейном велосипеде можно ездить по асфальту на&nbsp;разных
+            градиентах: будь&nbsp;то горы или равнины. Гонки проходят
+            в&nbsp;командном пелотоне, но&nbsp;тренироваться можно
             и&nbsp;самостоятельно.
-          </p>
-        </div>
-
-        <div class="coatings__inner coatings__inner_gravel">
-          <h2 class="section-heading section-heading_mobile coatings__heading">
-            Грэвел
-          </h2>
-
-          <div class="coatings__image-container">
-            <div class="coatings__heights coatings__heights_type_mid"></div>
-            <img
-              src="./src/images/forest-road.png"
-              alt="Асфальтовая дорога"
-              class="coatings__image"
-            />
-            <img
-              src="./src/images/highway-road.png"
-              alt="Дорога в лесу"
-              class="coatings__image"
-            />
-          </div>
-
-          <p class="section-text section-text_mobile coatings__text">
-            Грэвел похож на&nbsp;шоссейный велосипед, но&nbsp;конструкция рамы
-            немного отличается, и&nbsp;на&nbsp;нём стоят более широкие покрышки,
-            всё для того чтобы проехать по&nbsp;лёгкому бездорожью.
-          </p>
-        </div>
-
-        <div class="coatings__inner coatings__inner_tt">
-          <h2 class="section-heading section-heading_mobile coatings__heading">
-            ТТ
-          </h2>
-
-          <div class="coatings__image-container">
-            <div class="coatings__heights coatings__heights_type_low"></div>
-            <img
-              src="./src/images/highway-road.png"
-              alt="Асфальтовая дорога"
-              class="coatings__image"
-            />
-            <img
-              src="./src/images/black-road.png"
-              alt="Дорога в лесу"
-              class="coatings__image"
-            />
-          </div>
-
-          <p class="section-text section-text_mobile coatings__text">
-            ТТ&nbsp;&mdash; это велосипед для триатлона или раздельного старта,
-            гооняют на таком велике только по&nbsp;равнинному асфальту, велик
-            очень быстрые и аэродинамичный.
           </p>
         </div>
       </section>
 
-      <section class="bikes">
+      <section class="bikes" id="bikes">
         <div class="section-line"></div>
 
-        <h2 class="section-heading section-heading_mobile bikes__heading">
-          Велосипеды
-        </h2>
+        <div class="bikes__heading-container">
+          <h2 class="section-heading bikes__heading">Велосипеды</h2>
+
+          <nav>
+            <ul class="bikes__navigation">
+              <li class="bikes__nav-element bikes__nav-element_active">
+                Шоссе
+              </li>
+              <li class="bikes__nav-element">Грэвел</li>
+              <li class="bikes__nav-element">ТТ</li>
+            </ul>
+          </nav>
+        </div>
 
         <div class="bikes__select-container">
           <select class="select bikes__select">
@@ -221,17 +179,15 @@
         </div>
       </section>
 
-      <section class="training">
+      <section class="training" id="training">
         <div class="section-line"></div>
-        <h2 class="section-heading section-heading_mobile training__heading">
-          Тренировки
-        </h2>
+        <h2 class="section-heading training__heading">Тренировки</h2>
         <img
           src="./src/images/training-image.png"
           alt="Дорога в лесу"
           class="training__image"
         />
-        <p class="section-text section-text_mobile training__text">
+        <p class="section-text training__text">
           Чтобы найти маршрут для тренировки можно воспользоваться сервисом
           Komoot, а&nbsp;записать эти тренировки поможет приложение Strava,
           а&nbsp;также это приложение позволит построить тренировочный план.
@@ -248,24 +204,89 @@
     </main>
 
     <footer class="footer">
-      <h3 class="footer__heading">Подпишитесь на рассылку&nbsp;&mdash;</h3>
+      <div class="footer__container">
+        <h3 class="footer__heading">Подпишитесь на рассылку&nbsp;&mdash;</h3>
 
-      <form class="footer__form" action="">
-        <input class="footer__input" type="text" placeholder="Ваш e-mail" />
-        <button type="submit" class="footer__submit">ok</button>
-      </form>
+        <form class="footer__form" action="">
+          <input class="footer__input" type="text" placeholder="Ваш e-mail" />
+          <button type="submit" class="footer__submit">ok</button>
+        </form>
 
-      <div class="footer__inner">
-        <p class="footer__license">&copy;&nbsp;Road Club 2021</p>
-        <div class="footer__logo"></div>
+        <div class="footer__inner">
+          <p class="footer__license">&copy;&nbsp;Road Club 2021</p>
+          <div class="footer__logo"></div>
+          <div class="toggle toggle_dark footer__toggle">
+            <input class="toggle__input" type="checkbox" id="toggle" />
+            <label
+              class="toggle__label .toggle__label_dark"
+              for="toggle"
+            ></label>
+          </div>
+        </div>
       </div>
     </footer>
 
     <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
     <script src="./src/scripts/script.js"></script>
-    <script src="./src/scripts/newFile.js"></script>
   </body>
 </html>
+
+<!--
+<div class="coatings__inner coatings__inner_gravel">
+  <h2 class="section-heading coatings__heading">
+    Грэвел
+  </h2>
+
+  <div class="coatings__image-container">
+    <div class="coatings__heights coatings__heights_type_mid"></div>
+    <img
+      src="./src/images/forest-road.png"
+      alt="Асфальтовая дорога"
+      class="coatings__image"
+    />
+    <img
+      src="./src/images/highway-road.png"
+      alt="Дорога в лесу"
+      class="coatings__image"
+    />
+  </div>
+
+  <p class="section-text coatings__text">
+    Грэвел похож на&nbsp;шоссейный велосипед, но&nbsp;конструкция рамы
+    немного отличается, и&nbsp;на&nbsp;нём стоят более широкие покрышки,
+    всё для того чтобы проехать по&nbsp;лёгкому бездорожью.
+  </p>
+</div>
+
+<div class="coatings__inner coatings__inner_tt">
+  <h2 class="section-heading coatings__heading">
+    ТТ
+  </h2>
+
+  <div class="coatings__image-container">
+    <div class="coatings__heights coatings__heights_type_low"></div>
+    <img
+      src="./src/images/highway-road.png"
+      alt="Асфальтовая дорога"
+      class="coatings__image"
+    />
+    <img
+      src="./src/images/black-road.png"
+      alt="Дорога в лесу"
+      class="coatings__image"
+    />
+  </div>
+
+  <p class="section-text coatings__text">
+    ТТ&nbsp;&mdash; это велосипед для триатлона или раздельного старта,
+    гооняют на таком велике только по&nbsp;равнинному асфальту, велик
+    очень быстрые и аэродинамичный.
+  </p>
+</div>
+
+
+
+
 
 
 
@@ -347,4 +368,4 @@
     />
     <h3 class="bikes__slide-heading">Cervelo P-Series</h3></a
   >
-</li>
+</li> -->

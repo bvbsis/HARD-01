@@ -2,8 +2,8 @@
   @extend %font-family;
   color: $color--l-m;
   background-color: $color--bg--l-m;
-  max-width: 1440px;
   margin: auto;
+  max-width: 1440px;
 
   &_dark {
     color: $color--d-m;
