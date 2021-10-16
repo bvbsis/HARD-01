@@ -51,8 +51,6 @@ const desctopHighwayButton = document.querySelector("#desc-highway-button");
 const desctopGravelButton = document.querySelector("#desc-gravel-button");
 const desctopTtButton = document.querySelector("#desc-tt-button");
 
-console.log(bikesSliderWrapper.content);
-
 select.addEventListener('change', function() {
   if(this.value === 'highway') {
     bikesSliderWrapper.innerHTML = "";
@@ -89,4 +87,55 @@ desctopTtButton.addEventListener("click", function(){
   desctopGravelButton.classList.remove('bikes__nav-element_active');
   desctopTtButton.classList.add('bikes__nav-element_active');
 });
+
+const burgerButton = document.querySelector(".burger-btn__label");
+const header = document.querySelector(".header");
+const headerToggle = header.querySelector(".toggle");
+const headerToggleLabel = header.querySelector(".toggle__label");
+const page = document.querySelector(".page");
+const buttonLeft = document.querySelector(".button-left");
+const buttonRight = document.querySelector(".button-right");
+const footer = document.querySelector(".footer");
+const footerLicense = footer.querySelector(".footer__license");
+
+burgerButton.addEventListener("click", function() {
+  header.classList.toggle("header_opened");
+  headerToggle.classList.toggle("toggle_opened")
+});
+
+headerToggleLabel.addEventListener("click", function() {
+  page.classList.toggle("page_theme_dark");
+  headerToggleLabel.classList.toggle("toggle__label_theme_dark");
+  headerToggle.classList.toggle("toggle_theme_dark");
+  buttonLeft.classList.toggle("arrow-button_theme_dark");
+  buttonRight.classList.toggle("arrow-button_theme_dark");
+  footer.classList.toggle("footer_theme_dark");
+  footerLicense.classList.toggle("footer__license_theme_dark");
+});
+
+const footerToggle = footer.querySelector(".toggle");
+const footerToggleLabel = footer.querySelector(".toggle__label");
+
+footerToggleLabel.addEventListener("click", function() {
+  page.classList.toggle("page_theme_dark");
+  footerToggleLabel.classList.toggle("toggle__label_theme_dark");
+  footerToggle.classList.toggle("toggle_theme_dark");
+  buttonLeft.classList.toggle("arrow-button_theme_dark");
+  buttonRight.classList.toggle("arrow-button_theme_dark");
+  footer.classList.toggle("footer_theme_dark");
+  footerLicense.classList.toggle("footer__license_theme_dark");
+})
+
+// const footerInput = document.querySelector(".footer__input");
+// const footerForm = document.querySelector(".footer__form");
+
+// console.log(footerForm)
+
+// footerForm.addEventListener("submit", function(e) {
+//   e.preventDefault();
+//   footerForm.value = "";
+//   footerInput.placeholder = "Круто!";
+// })
+
+
 

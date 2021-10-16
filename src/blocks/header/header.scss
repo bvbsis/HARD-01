@@ -7,7 +7,6 @@
   display: flex;
   flex-direction: column;
   height: 74px;
-  transition: all 300ms ease-in;
   overflow: hidden;
 
   &_opened {
@@ -29,7 +28,7 @@
   &__nav-el {
     display: block;
     margin-bottom: 31px;
-    color: $color--l-m;
+    color: inherit;
     max-width: 220px;
 
     &:first-child {

@@ -2,6 +2,10 @@
   padding: 60px 18px 10px;
   background-color: #efefef;
 
+  &_theme_dark {
+    background-color: rgba(47, 47, 47, 1);
+  }
+
   &__container {
     max-width: 1440px;
     margin: auto;
@@ -72,6 +76,10 @@
     font-size: 14px;
     line-height: 1.4;
     color: #cfcfcf;
+
+    &_theme_dark {
+      color: rgba(86, 86, 86, 1);
+    }
   }
 
   &__logo {

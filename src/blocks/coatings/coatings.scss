@@ -98,11 +98,17 @@
     z-index: 100;
     right: 18px;
     top: 49px;
+    transition: opacity 100ms ease-in;
+
+    &:hover {
+      opacity: .6;
+    }
 
     &_reverse {
       transform: rotate(180deg);
       right: 52px;
     }
+
   }
 
   @media screen and (min-width: 600px) {

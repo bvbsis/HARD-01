@@ -7,8 +7,8 @@
     <link rel="stylesheet" href="./styles/style.css" />
     <title>HARD-01</title>
   </head>
-  <body class="page .page_theme_dark">
-    <header class="header .header_opened">
+  <body class="page">
+    <header class="header">
       <div class="burger-btn header__burger-btn">
         <input class="burger-btn__input" type="checkbox" id="burger-btn__input" />
         <label for="burger-btn__input" class="burger-btn__label"></label>
@@ -23,7 +23,7 @@
       </nav>
 
       <div class="header__inner">
-        <div class="toggle toggle_closed toggle_theme_dark header__toggle">
+        <div class="toggle toggle_theme_dark header__toggle">
           <input class="toggle__input" type="checkbox" id="toggle-header" />
           <label class="toggle__label .toggle__label_theme_dark" for="toggle-header"></label>
         </div>
@@ -221,17 +221,17 @@
       <div class="footer__container">
         <h3 class="footer__heading">Подпишитесь на рассылку&nbsp;&mdash;</h3>
 
-        <form name="email" class="footer__form" action="post">
+        <form id="ff" name="email" class="footer__form" action="post">
           <input class="footer__input" type="text" placeholder="Ваш e-mail" />
-          <button type="submit" class="footer__submit">ok</button>
+          <button form="ff" type="submit" class="footer__submit">ok</button>
         </form>
 
         <div class="footer__inner">
           <p class="footer__license">&copy;&nbsp;Road Club 2021</p>
           <div class="footer__logo"></div>
 
-          <div class="toggle toggle_dark footer__toggle">
-            <input class="toggle__input" type="checkbox" id="toggle-footer" />
+          <div class="toggle toggle_opened toggle_dark footer__toggle">
+            <input class="toggle__input" type="checkbox"/>
             <label class="toggle__label .toggle__label_dark" for="toggle-footer"></label>
           </div>
         </div>

@@ -1,5 +1,5 @@
 .toggle {
-  display: block;
+  display: none;
   width: 44px;
   height: 24px;
   position: relative;
@@ -39,8 +39,8 @@
     background-image: url(../src/images/moon-icon-dark.svg);
   }
 
-  &_closed {
-    display: none;
+  &_opened {
+    display: block;
   }
 
   &__label {
