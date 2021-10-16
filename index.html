@@ -152,9 +152,9 @@
 
           <nav>
             <ul class="bikes__navigation">
-              <li class="bikes__nav-element bikes__nav-element_active">Шоссе</li>
-              <li class="bikes__nav-element">Грэвел</li>
-              <li class="bikes__nav-element">ТТ</li>
+              <li id="desc-highway-button" class="bikes__nav-element bikes__nav-element_active">Шоссе</li>
+              <li id="desc-gravel-button" class="bikes__nav-element">Грэвел</li>
+              <li id="desc-tt-button" class="bikes__nav-element">ТТ</li>
             </ul>
           </nav>
         </div>
@@ -238,6 +238,118 @@
       </div>
     </footer>
 
+
+    <template id="highway">
+      <li class="bikes__slide swiper-slide">
+        <a target="_blank" href="https://www.sigmasports.com/item/Cervelo/Caledonia-5-Ultegra-Disc-Road-Bike-2021/RDEN" class="bikes__link">
+          <img src="./src/images/Cervelo-Caledonia-5.png" alt="Фото байка" class="bikes__slide-image" />
+          <h3 class="bikes__slide-heading">Cervelo Caledonia-5</h3>
+        </a>
+      </li>
+
+      <li class="bikes__slide swiper-slide">
+        <a target="_blank" href="https://www.sigmasports.com/item/Cannondale/SystemSix-HiMOD-Ultegra-Di2-Disc-Road-Bike-2021/R82J" class="bikes__link">
+          <img src="./src/images/Cannondale-Systemsix-Himod.png" alt="Фото байка" class="bikes__slide-image" />
+          <h3 class="bikes__slide-heading">Cannondale Systemsix Himod</h3>
+          </a>
+      </li>
+
+      <li class="bikes__slide swiper-slide">
+        <a target="_blank" href="https://www.sigmasports.com/item/Trek/Domane-SL-7-Force-eTap-AXS-Disc-Road-Bike-2021/RULF" class="bikes__link">
+          <img src="./src/images/Trek-Domane-SL-7.png" alt="Фото байка" class="bikes__slide-image" />
+          <h3 class="bikes__slide-heading">Trek Domane SL-7</h3>
+          </a>
+      </li>
+    </template>
+
+    <template id="gravel">
+      <li class="bikes__slide swiper-slide">
+        <a
+          target="_blank"
+          href="https://www.sigmasports.com/item/Cervelo/Aspero-GRX-810-1x-Disc-Gravel-Bike-2021/RJDE"
+          class="bikes__link"
+          ><img
+            src="./src/images/Cervelo-Aspero-GRX-810.png"
+            alt="Фото байка"
+            class="bikes__slide-image"
+          />
+          <h3 class="bikes__slide-heading">Cervelo Aspero GRX 810</h3></a
+        >
+      </li>
+
+      <li class="bikes__slide swiper-slide">
+        <a
+          target="_blank"
+          href="https://www.sigmasports.com/item/Specialized/S-Works-Diverge-Gravel-Bike-2020/NVJ9"
+          class="bikes__link"
+          ><img
+            src="./src/images/Specialized-S-Works-Diverge.png"
+            alt="Фото байка"
+            class="bikes__slide-image"
+          />
+          <h3 class="bikes__slide-heading">Specialized S-Works Diverge</h3></a
+        >
+      </li>
+
+      <li class="bikes__slide swiper-slide">
+        <a
+          target="_blank"
+          href="https://www.sigmasports.com/item/Cannondale/Topstone-Carbon-Lefty-3-Disc-Gravel-Road-Bike-2021/PUC8"
+          class="bikes__link"
+          ><img
+            src="./src/images/Cannondale-Topstone-Lefty-3.png"
+            alt="Фото байка"
+            class="bikes__slide-image"
+          />
+          <h3 class="bikes__slide-heading">Cannondale Topstone Lefty 3</h3></a
+        >
+      </li>
+    </template>
+
+    <template id="tt">
+      <li class="bikes__slide swiper-slide">
+        <a
+          target="_blank"
+          href="https://www.sigmasports.com/item/Specialized/S-Works-Shiv-Disc-Limited-Edition-Triathlon-Bike-2019/K8P9 "
+          class="bikes__link"
+          ><img
+            src="./src/images/Specialized-S-Works-Shiv.png"
+            alt="Фото байка"
+            class="bikes__slide-image"
+          />
+          <h3 class="bikes__slide-heading">Specialized S-Works Shiv</h3></a
+        >
+      </li>
+
+      <li class="bikes__slide swiper-slide">
+        <a
+          target="_blank"
+          href="https://www.sigmasports.com/item/BMC/Timemachine-01-One-Force-Disc-TT-Triathlon-Bike-2021/S835"
+          class="bikes__link"
+          ><img
+            src="./src/images/BMC-Timemachine-01-ONE.png"
+            alt="Фото байка"
+            class="bikes__slide-image"
+          />
+          <h3 class="bikes__slide-heading">BMC Timemachine 01 ONE</h3></a
+        >
+      </li>
+
+      <li class="bikes__slide swiper-slide">
+        <a
+          target="_blank"
+          href="https://www.sigmasports.com/item/Cervelo/P-Series-Ultegra-Di2-TT-Triathlon-Bike-2021/RM6Q"
+          class="bikes__link"
+          ><img
+            src="./src/images/Cervelo-P-Series.png"
+            alt="Фото байка"
+            class="bikes__slide-image"
+          />
+          <h3 class="bikes__slide-heading">Cervelo P-Series</h3></a
+        >
+      </li>
+    </template>
+
     <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
     <script src="./src/scripts/script.js"></script>
   </body>
@@ -249,88 +361,8 @@
 
 
 
-<li class="bikes__slide swiper-slide">
-  <a
-    target="_blank"
-    href="https://www.sigmasports.com/item/Cervelo/Aspero-GRX-810-1x-Disc-Gravel-Bike-2021/RJDE"
-    class="bikes__link"
-    ><img
-      src="./src/images/Cervelo-Aspero-GRX-810.png"
-      alt="Фото байка"
-      class="bikes__slide-image"
-    />
-    <h3 class="bikes__slide-heading">Cervelo Aspero GRX 810</h3></a
-  >
-</li>
-
-<li class="bikes__slide swiper-slide">
-  <a
-    target="_blank"
-    href="https://www.sigmasports.com/item/Specialized/S-Works-Diverge-Gravel-Bike-2020/NVJ9"
-    class="bikes__link"
-    ><img
-      src="./src/images/Specialized-S-Works-Diverge.png"
-      alt="Фото байка"
-      class="bikes__slide-image"
-    />
-    <h3 class="bikes__slide-heading">Specialized S-Works Diverge</h3></a
-  >
-</li>
-
-<li class="bikes__slide swiper-slide">
-  <a
-    target="_blank"
-    href="https://www.sigmasports.com/item/Cannondale/Topstone-Carbon-Lefty-3-Disc-Gravel-Road-Bike-2021/PUC8"
-    class="bikes__link"
-    ><img
-      src="./src/images/Cannondale-Topstone-Lefty-3.png"
-      alt="Фото байка"
-      class="bikes__slide-image"
-    />
-    <h3 class="bikes__slide-heading">Cannondale Topstone Lefty 3</h3></a
-  >
-</li>
 
 
 
-<li class="bikes__slide swiper-slide">
-  <a
-    target="_blank"
-    href="https://www.sigmasports.com/item/Specialized/S-Works-Shiv-Disc-Limited-Edition-Triathlon-Bike-2019/K8P9 "
-    class="bikes__link"
-    ><img
-      src="./src/images/Specialized-S-Works-Shiv.png"
-      alt="Фото байка"
-      class="bikes__slide-image"
-    />
-    <h3 class="bikes__slide-heading">Specialized S-Works Shiv</h3></a
-  >
-</li>
 
-<li class="bikes__slide swiper-slide">
-  <a
-    target="_blank"
-    href="https://www.sigmasports.com/item/BMC/Timemachine-01-One-Force-Disc-TT-Triathlon-Bike-2021/S835"
-    class="bikes__link"
-    ><img
-      src="./src/images/BMC-Timemachine-01-ONE.png"
-      alt="Фото байка"
-      class="bikes__slide-image"
-    />
-    <h3 class="bikes__slide-heading">BMC Timemachine 01 ONE</h3></a
-  >
-</li>
 
-<li class="bikes__slide swiper-slide">
-  <a
-    target="_blank"
-    href="https://www.sigmasports.com/item/Cervelo/P-Series-Ultegra-Di2-TT-Triathlon-Bike-2021/RM6Q"
-    class="bikes__link"
-    ><img
-      src="./src/images/Cervelo-P-Series.png"
-      alt="Фото байка"
-      class="bikes__slide-image"
-    />
-    <h3 class="bikes__slide-heading">Cervelo P-Series</h3></a
-  >
-</li> -->

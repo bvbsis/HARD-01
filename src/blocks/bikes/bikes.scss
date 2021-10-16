@@ -169,9 +169,20 @@
       margin-right: 40px;
       font-size: 18px;
       line-height: 1.56;
+      transition: opacity 100ms ease-in;
+      cursor: pointer;
+
+      &:hover {
+        opacity: .6;
+      }
 
       &_active {
         font-weight: 600;
+        cursor: default;
+
+        &:hover {
+          opacity: unset;
+        }
       }
 
       &:last-child {

@@ -913,9 +913,20 @@
     margin-right: 40px;
     font-size: 18px;
     line-height: 1.56;
+    -webkit-transition: opacity 100ms ease-in;
+    -o-transition: opacity 100ms ease-in;
+    transition: opacity 100ms ease-in;
+    cursor: pointer;
+  }
+  .bikes__nav-element:hover {
+    opacity: 0.6;
   }
   .bikes__nav-element_active {
     font-weight: 600;
+    cursor: default;
+  }
+  .bikes__nav-element_active:hover {
+    opacity: unset;
   }
   .bikes__nav-element:last-child {
     margin: 0;
@@ -1096,6 +1107,7 @@
   cursor: pointer;
   border: none;
   background-color: transparent;
+  color: inherit;
 }
 .footer__inner {
   display: -webkit-box;
