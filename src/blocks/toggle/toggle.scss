@@ -31,11 +31,11 @@
     z-index: 20;
   }
 
-  &_dark::before {
+  &_theme_dark::before {
     background-image: url(../src/images/sun-icon-dark.svg);
   }
 
-  &_dark::after {
+  &_theme_dark::after {
     background-image: url(../src/images/moon-icon-dark.svg);
   }
 
@@ -66,7 +66,7 @@
         left 200ms ease-in-out 100ms;
     }
 
-    &_dark {
+    &_theme_dark {
       background-color: #545454;
     }
   }

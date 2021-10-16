@@ -1,9 +1,9 @@
-@import url(../vendor/normalize.css);
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+@import "../vendor/normalize.css";
+@import "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap";
 @import "./variables.scss";
+@import "https://unpkg.com/swiper@7/swiper-bundle.min.css";
 @import "../src/blocks/section-heading/section-heading.scss";
 @import "../src/blocks/section-text/section-text.scss";
-@import "../src/blocks/section-line/section-line.scss";
 @import "../src/blocks/button/button.scss";
 @import "../src/blocks/arrow-button/arrow-button.scss";
 @import "../src/blocks/page/page.scss";

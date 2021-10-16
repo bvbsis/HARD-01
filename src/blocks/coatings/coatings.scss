@@ -1,8 +1,20 @@
 .coatings {
   position: relative;
-  padding: 40px 18px;
+  padding: 1px 18px 80px;
   margin: auto;
   max-width: 1440px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    height: 1px;
+    width: calc(100% - 36px);
+    background-color: #cac9c9;
+    top: 0;
+
+    z-index: 100;
+
+  }
 
   &__heading {
     margin: 40px 0 0;
@@ -73,7 +85,7 @@
     position: absolute;
     z-index: 100;
     right: 18px;
-    top: 87px;
+    top: 49px;
 
     &_reverse {
       transform: rotate(180deg);
@@ -81,8 +93,13 @@
     }
   }
 
-  @media screen and (min-width: 560px) {
+  @media screen and (min-width: 600px) {
     padding: 60px 0 60px 8.3%;
+
+    &::after {
+      display: none;
+      height: 0;
+    }
 
     &__inner {
       display: grid;

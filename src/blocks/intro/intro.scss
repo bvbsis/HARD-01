@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   position: relative;
-  padding: 114px 18px 40px;
+  padding: 114px 18px 77px;
   margin: auto;
   max-width: 1440px;
 
@@ -18,7 +18,7 @@
     align-self: flex-end;
   }
 
-  &__inner {
+  &__bike-name {
     display: none;
     height: 0;
   }
@@ -78,22 +78,23 @@
       width: 180px;
     }
 
-    &__inner {
-      display: flex;
-      margin: 23.6% 0 0;
-      height: fit-content;
-      align-items: center;
-    }
-
     &__bike-name {
-      margin: 0 4% 0 0;
+      display: unset;
+      height: unset;
+      margin: 23.6% 4% 0 0;
       font-size: 18px;
-    }
+      position: relative;
 
-    &__line {
-      width: 19%;
-      height: 2px;
-      background-color: rgba(215, 212, 212, 1);
+      &::after {
+        content: "";
+        position: absolute;
+        width: 19%;
+        top: 11px;
+        left: 225px;
+        height: 2px;
+        z-index: -5;
+        background-color: rgba(215, 212, 212, 1);
+      }
     }
 
     &__bike-fix {

@@ -4,35 +4,28 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
-    />
     <link rel="stylesheet" href="./styles/style.css" />
     <title>HARD-01</title>
   </head>
-  <body class="page .page_dark">
+  <body class="page .page_theme_dark">
     <header class="header .header_opened">
       <div class="burger-btn header__burger-btn">
-        <input
-          class="burger-btn__input"
-          type="checkbox"
-          id="burger-btn__input"
-        />
+        <input class="burger-btn__input" type="checkbox" id="burger-btn__input" />
         <label for="burger-btn__input" class="burger-btn__label"></label>
       </div>
 
-      <ul class="header__nav">
-        <li class="header__nav-el">
-          <a href="#coatings">Покрытия и градиенты</a>
-        </li>
-        <li class="header__nav-el"><a href="#bikes">Велосипеды</a></li>
-        <li class="header__nav-el"><a href="#training">Тренировки</a></li>
-      </ul>
+      <nav>
+        <ul class="header__nav">
+          <li class="header__nav-el"><a class="header__nav-link" href="#coatings">Покрытия и градиенты</a></li>
+          <li class="header__nav-el"><a class="header__nav-link" href="#bikes">Велосипеды</a></li>
+          <li class="header__nav-el"><a class="header__nav-link" href="#training">Тренировки</a></li>
+        </ul>
+      </nav>
+
       <div class="header__inner">
-        <div class="toggle toggle_closed toggle_dark header__toggle">
+        <div class="toggle toggle_closed toggle_theme_dark header__toggle">
           <input class="toggle__input" type="checkbox" id="toggle-header" />
-          <label class="toggle__label .toggle__label_dark" for="toggle-header"></label>
+          <label class="toggle__label .toggle__label_theme_dark" for="toggle-header"></label>
         </div>
       </div>
     </header>
@@ -51,15 +44,12 @@
           по&nbsp;живописным маршрутам&nbsp;&mdash; нужно только определиться
           с&nbsp;выбором велосипеда и&nbsp;отправиться в&nbsp;путь.
         </p>
-        <button class="intro__button button">Подробнее</button>
-        <div class="intro__inner">
-          <p class="intro__bike-name">Cannondale Systemsix</p>
-          <div class="intro__line"></div>
-        </div>
+        <button type="button" class="intro__button button">Подробнее</button>
+
+        <p class="intro__bike-name">Cannondale Systemsix</p>
       </section>
 
       <section class="tip">
-        <div class="section-line"></div>
         <img
           src="./src/images/tip-image.png"
           alt="Горная дорога"
@@ -74,28 +64,16 @@
       </section>
 
       <section class="coatings" id="coatings">
-        <div class="section-line"></div>
+        <button type="button" class="arrow-button coatings__button"></button>
+        <button type="button" class="arrow-button coatings__button coatings__button_reverse"></button>
 
-        <button class="arrow-button coatings__button"></button
-        ><button
-          class="arrow-button coatings__button coatings__button_reverse"
-        ></button>
-
-        <div class="coatings__inner coatings__inner_highway">
+        <div class="coatings__inner">
           <h2 class="section-heading coatings__heading">Шоссе</h2>
 
           <div class="coatings__image-container">
             <div class="coatings__heights coatings__heights_type_high"></div>
-            <img
-              src="./src/images/black-road.png"
-              alt="Асфальтовая дорога"
-              class="coatings__image"
-            />
-            <img
-              src="./src/images/forest-road.png"
-              alt="Дорога в лесу"
-              class="coatings__image"
-            />
+            <img src="./src/images/black-road.png" alt="Асфальтовая дорога" class="coatings__image" />
+            <img src="./src/images/forest-road.png" alt="Дорога в лесу" class="coatings__image" />
           </div>
 
           <p class="section-text coatings__text">
@@ -108,16 +86,12 @@
       </section>
 
       <section class="bikes" id="bikes">
-        <div class="section-line"></div>
-
         <div class="bikes__heading-container">
           <h2 class="section-heading bikes__heading">Велосипеды</h2>
 
           <nav>
             <ul class="bikes__navigation">
-              <li class="bikes__nav-element bikes__nav-element_active">
-                Шоссе
-              </li>
+              <li class="bikes__nav-element bikes__nav-element_active">Шоссе</li>
               <li class="bikes__nav-element">Грэвел</li>
               <li class="bikes__nav-element">ТТ</li>
             </ul>
@@ -135,44 +109,24 @@
         <div class="bikes__slider">
           <ul class="bikes__slider-wrapper swiper-wrapper">
             <li class="bikes__slide swiper-slide">
-              <a
-                href="https://www.sigmasports.com/item/Cervelo/Caledonia-5-Ultegra-Disc-Road-Bike-2021/RDEN"
-                class="bikes__link"
-                ><img
-                  src="./src/images/Cervelo-Caledonia-5.png"
-                  alt="Фото байка"
-                  class="bikes__slide-image"
-                />
-                <h3 class="bikes__slide-heading">Cervelo Caledonia-5</h3></a
-              >
+              <a target="_blank" href="https://www.sigmasports.com/item/Cervelo/Caledonia-5-Ultegra-Disc-Road-Bike-2021/RDEN" class="bikes__link">
+                <img src="./src/images/Cervelo-Caledonia-5.png" alt="Фото байка" class="bikes__slide-image" />
+                <h3 class="bikes__slide-heading">Cervelo Caledonia-5</h3>
+              </a>
             </li>
 
             <li class="bikes__slide swiper-slide">
-              <a
-                href="https://www.sigmasports.com/item/Cannondale/SystemSix-HiMOD-Ultegra-Di2-Disc-Road-Bike-2021/R82J"
-                class="bikes__link"
-                ><img
-                  src="./src/images/Cannondale-Systemsix-Himod.png"
-                  alt="Фото байка"
-                  class="bikes__slide-image"
-                />
-                <h3 class="bikes__slide-heading">
-                  Cannondale Systemsix Himod
-                </h3></a
-              >
+              <a target="_blank" href="https://www.sigmasports.com/item/Cannondale/SystemSix-HiMOD-Ultegra-Di2-Disc-Road-Bike-2021/R82J" class="bikes__link">
+                <img src="./src/images/Cannondale-Systemsix-Himod.png" alt="Фото байка" class="bikes__slide-image" />
+                <h3 class="bikes__slide-heading">Cannondale Systemsix Himod</h3>
+                </a>
             </li>
 
             <li class="bikes__slide swiper-slide">
-              <a
-                href="https://www.sigmasports.com/item/Trek/Domane-SL-7-Force-eTap-AXS-Disc-Road-Bike-2021/RULF"
-                class="bikes__link"
-                ><img
-                  src="./src/images/Trek-Domane-SL-7.png"
-                  alt="Фото байка"
-                  class="bikes__slide-image"
-                />
-                <h3 class="bikes__slide-heading">Trek Domane SL-7</h3></a
-              >
+              <a target="_blank" href="https://www.sigmasports.com/item/Trek/Domane-SL-7-Force-eTap-AXS-Disc-Road-Bike-2021/RULF" class="bikes__link">
+                <img src="./src/images/Trek-Domane-SL-7.png" alt="Фото байка" class="bikes__slide-image" />
+                <h3 class="bikes__slide-heading">Trek Domane SL-7</h3>
+                </a>
             </li>
           </ul>
           <div class="bikes__pagination"></div>
@@ -180,24 +134,23 @@
       </section>
 
       <section class="training" id="training">
-        <div class="section-line"></div>
         <h2 class="section-heading training__heading">Тренировки</h2>
-        <img
-          src="./src/images/training-image.png"
-          alt="Дорога в лесу"
-          class="training__image"
-        />
+
+        <img src="./src/images/training-image.png" alt="Дорога в лесу" class="training__image" />
+
         <p class="section-text training__text">
           Чтобы найти маршрут для тренировки можно воспользоваться сервисом
           Komoot, а&nbsp;записать эти тренировки поможет приложение Strava,
           а&nbsp;также это приложение позволит построить тренировочный план.
         </p>
+
         <ul class="training__inner">
-          <li class="training__link">
-            <a href="https://www.strava.com">Strava</a>
+          <li class="training__link-container">
+            <a target="_blank" class="training__link" href="https://www.strava.com">Strava</a>
           </li>
+
           <li class="training__link">
-            <a href="https://www.komoot.com">Komoot</a>
+            <a target="_blank" class="training__link" href="https://www.komoot.com">Komoot</a>
           </li>
         </ul>
       </section>
@@ -207,7 +160,7 @@
       <div class="footer__container">
         <h3 class="footer__heading">Подпишитесь на рассылку&nbsp;&mdash;</h3>
 
-        <form class="footer__form" action="">
+        <form name="email" class="footer__form" action="post">
           <input class="footer__input" type="text" placeholder="Ваш e-mail" />
           <button type="submit" class="footer__submit">ok</button>
         </form>
@@ -215,12 +168,10 @@
         <div class="footer__inner">
           <p class="footer__license">&copy;&nbsp;Road Club 2021</p>
           <div class="footer__logo"></div>
+
           <div class="toggle toggle_dark footer__toggle">
             <input class="toggle__input" type="checkbox" id="toggle-footer" />
-            <label
-              class="toggle__label .toggle__label_dark"
-              for="toggle-footer"
-            ></label>
+            <label class="toggle__label .toggle__label_dark" for="toggle-footer"></label>
           </div>
         </div>
       </div>
@@ -292,6 +243,7 @@
 
 <li class="bikes__slide swiper-slide">
   <a
+    target="_blank"
     href="https://www.sigmasports.com/item/Cervelo/Aspero-GRX-810-1x-Disc-Gravel-Bike-2021/RJDE"
     class="bikes__link"
     ><img
@@ -305,6 +257,7 @@
 
 <li class="bikes__slide swiper-slide">
   <a
+    target="_blank"
     href="https://www.sigmasports.com/item/Specialized/S-Works-Diverge-Gravel-Bike-2020/NVJ9"
     class="bikes__link"
     ><img
@@ -318,6 +271,7 @@
 
 <li class="bikes__slide swiper-slide">
   <a
+    target="_blank"
     href="https://www.sigmasports.com/item/Cannondale/Topstone-Carbon-Lefty-3-Disc-Gravel-Road-Bike-2021/PUC8"
     class="bikes__link"
     ><img
@@ -333,6 +287,7 @@
 
 <li class="bikes__slide swiper-slide">
   <a
+    target="_blank"
     href="https://www.sigmasports.com/item/Specialized/S-Works-Shiv-Disc-Limited-Edition-Triathlon-Bike-2019/K8P9 "
     class="bikes__link"
     ><img
@@ -346,6 +301,7 @@
 
 <li class="bikes__slide swiper-slide">
   <a
+    target="_blank"
     href="https://www.sigmasports.com/item/BMC/Timemachine-01-One-Force-Disc-TT-Triathlon-Bike-2021/S835"
     class="bikes__link"
     ><img
@@ -359,6 +315,7 @@
 
 <li class="bikes__slide swiper-slide">
   <a
+    target="_blank"
     href="https://www.sigmasports.com/item/Cervelo/P-Series-Ultegra-Di2-TT-Triathlon-Bike-2021/RM6Q"
     class="bikes__link"
     ><img

@@ -1,8 +1,19 @@
 .tip {
-  padding: 40px 18px 0;
+  padding: 0 18px 42px;
   margin: auto;
   max-width: 1440px;
+  position: relative;
+  box-sizing: content-box;
 
+  &::after {
+    content: "";
+    position: absolute;
+    height: 1px;
+    width: calc(100% - 36px);
+    background-color: #cac9c9;
+    top: 0;
+    z-index: 100;
+  }
 
   &__image {
     width: 100%;
@@ -32,26 +43,37 @@
     opacity: 0.7;
   }
 
-  @media screen and (min-width: 870px) {
+  @media screen and (min-width: 600px) {
     display: grid;
-    grid-template-columns: 49.2% 50.8%;
-    padding: 7% 0 0 8.3%;
+    grid-template-columns: 54.1% 45.9%;
+    padding: 7% 8.3% 0;
+
+    &::after {
+      display: none;
+      height: 0;
+    }
 
     &__image {
       grid-row: 1/4;
     }
 
     &__heading {
-      margin: 3.2% 0 0 12%;
+      margin: 3.2% 0 0 14.3%;
       max-width: 530px;
     }
 
     &__author {
-      margin: 37% 0 0 12%;
+      margin: 15% 0 0 14.3%;
     }
 
     &__authors-activity {
-      margin: 0 0 0 12%;
+      margin: 0 0 0 14.3%;
+    }
+  }
+
+  @media screen and (min-width: 860px) {
+    &__author {
+      margin: 45.2% 0 0 14.3%;
     }
   }
 
