@@ -92,16 +92,27 @@ const burgerButton = document.querySelector(".burger-btn__label");
 const header = document.querySelector(".header");
 const headerToggle = header.querySelector(".toggle");
 const headerToggleLabel = header.querySelector(".toggle__label");
+const headerBurgerInput = header.querySelector(".burger-btn__input")
 const page = document.querySelector(".page");
 const buttonLeft = document.querySelector(".button-left");
 const buttonRight = document.querySelector(".button-right");
 const footer = document.querySelector(".footer");
 const footerLicense = footer.querySelector(".footer__license");
+const headerNavLinks = document.querySelectorAll(".header__nav-link")
+
 
 burgerButton.addEventListener("click", function() {
   header.classList.toggle("header_opened");
   headerToggle.classList.toggle("toggle_opened")
 });
+
+for (let i = 0; i < headerNavLinks.length; i++) {
+  headerNavLinks[i].addEventListener("click", function() {
+    header.classList.remove("header_opened");
+    headerToggle.classList.remove("toggle_opened");
+    headerBurgerInput.checked = false;
+  });
+}
 
 headerToggleLabel.addEventListener("click", function() {
   page.classList.toggle("page_theme_dark");
