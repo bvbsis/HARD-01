@@ -64,24 +64,85 @@
       </section>
 
       <section class="coatings" id="coatings">
-        <button type="button" class="arrow-button coatings__button"></button>
-        <button type="button" class="arrow-button coatings__button coatings__button_reverse"></button>
+        <div class="coatings__slider">
+          <ul class="coatings__slider-wrapper swiper-wrapper">
+            <li class="coatings__slide swiper-slide">
+              <div class="coatings__inner">
+                <h2 class="section-heading coatings__heading">Шоссе</h2>
 
-        <div class="coatings__inner">
-          <h2 class="section-heading coatings__heading">Шоссе</h2>
+                <div class="coatings__image-container">
+                  <div class="coatings__heights coatings__heights_type_high"></div>
+                  <img src="./src/images/black-road.png" alt="Асфальтовая дорога" class="coatings__image" />
+                  <img src="./src/images/forest-road.png" alt="Дорога в лесу" class="coatings__image" />
+                </div>
 
-          <div class="coatings__image-container">
-            <div class="coatings__heights coatings__heights_type_high"></div>
-            <img src="./src/images/black-road.png" alt="Асфальтовая дорога" class="coatings__image" />
-            <img src="./src/images/forest-road.png" alt="Дорога в лесу" class="coatings__image" />
-          </div>
+                <p class="section-text coatings__text">
+                  На&nbsp;шоссейном велосипеде можно ездить по асфальту на&nbsp;разных
+                  градиентах: будь&nbsp;то горы или равнины. Гонки проходят
+                  в&nbsp;командном пелотоне, но&nbsp;тренироваться можно
+                  и&nbsp;самостоятельно.
+                </p>
+              </div>
+            </li>
 
-          <p class="section-text coatings__text">
-            На&nbsp;шоссейном велосипеде можно ездить по асфальту на&nbsp;разных
-            градиентах: будь&nbsp;то горы или равнины. Гонки проходят
-            в&nbsp;командном пелотоне, но&nbsp;тренироваться можно
-            и&nbsp;самостоятельно.
-          </p>
+            <li class="coatings__slide swiper-slide">
+              <div class="coatings__inner">
+                <h2 class="section-heading coatings__heading">
+                  Грэвел
+                </h2>
+
+                <div class="coatings__image-container">
+                  <div class="coatings__heights coatings__heights_type_mid"></div>
+                  <img
+                    src="./src/images/forest-road.png"
+                    alt="Асфальтовая дорога"
+                    class="coatings__image"
+                  />
+                  <img
+                    src="./src/images/highway-road.png"
+                    alt="Дорога в лесу"
+                    class="coatings__image"
+                  />
+                </div>
+
+                <p class="section-text coatings__text">
+                  Грэвел похож на&nbsp;шоссейный велосипед, но&nbsp;конструкция рамы
+                  немного отличается, и&nbsp;на&nbsp;нём стоят более широкие покрышки,
+                  всё для того чтобы проехать по&nbsp;лёгкому бездорожью.
+                </p>
+              </div>
+            </li>
+
+            <li class="coatings__slide swiper-slide">
+              <div class="coatings__inner">
+                <h2 class="section-heading coatings__heading">
+                  ТТ
+                </h2>
+
+                <div class="coatings__image-container">
+                  <div class="coatings__heights coatings__heights_type_low"></div>
+                  <img
+                    src="./src/images/highway-road.png"
+                    alt="Асфальтовая дорога"
+                    class="coatings__image"
+                  />
+                  <img
+                    src="./src/images/black-road.png"
+                    alt="Дорога в лесу"
+                    class="coatings__image"
+                  />
+                </div>
+
+                <p class="section-text coatings__text">
+                  ТТ&nbsp;&mdash; это велосипед для триатлона или раздельного старта,
+                  гооняют на таком велике только по&nbsp;равнинному асфальту, велик
+                  очень быстрые и аэродинамичный.
+                </p>
+              </div>
+            </li>
+          </ul>
+          <button type="button" class="arrow-button coatings__button button-left"></button>
+          <button type="button" class="arrow-button coatings__button coatings__button_reverse button-right"></button>
         </div>
       </section>
 
@@ -181,59 +242,6 @@
     <script src="./src/scripts/script.js"></script>
   </body>
 </html>
-
-<!--
-<div class="coatings__inner coatings__inner_gravel">
-  <h2 class="section-heading coatings__heading">
-    Грэвел
-  </h2>
-
-  <div class="coatings__image-container">
-    <div class="coatings__heights coatings__heights_type_mid"></div>
-    <img
-      src="./src/images/forest-road.png"
-      alt="Асфальтовая дорога"
-      class="coatings__image"
-    />
-    <img
-      src="./src/images/highway-road.png"
-      alt="Дорога в лесу"
-      class="coatings__image"
-    />
-  </div>
-
-  <p class="section-text coatings__text">
-    Грэвел похож на&nbsp;шоссейный велосипед, но&nbsp;конструкция рамы
-    немного отличается, и&nbsp;на&nbsp;нём стоят более широкие покрышки,
-    всё для того чтобы проехать по&nbsp;лёгкому бездорожью.
-  </p>
-</div>
-
-<div class="coatings__inner coatings__inner_tt">
-  <h2 class="section-heading coatings__heading">
-    ТТ
-  </h2>
-
-  <div class="coatings__image-container">
-    <div class="coatings__heights coatings__heights_type_low"></div>
-    <img
-      src="./src/images/highway-road.png"
-      alt="Асфальтовая дорога"
-      class="coatings__image"
-    />
-    <img
-      src="./src/images/black-road.png"
-      alt="Дорога в лесу"
-      class="coatings__image"
-    />
-  </div>
-
-  <p class="section-text coatings__text">
-    ТТ&nbsp;&mdash; это велосипед для триатлона или раздельного старта,
-    гооняют на таком велике только по&nbsp;равнинному асфальту, велик
-    очень быстрые и аэродинамичный.
-  </p>
-</div>
 
 
 

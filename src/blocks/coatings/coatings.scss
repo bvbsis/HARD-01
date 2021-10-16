@@ -3,6 +3,7 @@
   padding: 1px 18px 80px;
   margin: auto;
   max-width: 1440px;
+  overflow-x: hidden;
 
   &::after {
     content: "";
@@ -17,7 +18,7 @@
   }
 
   &__heading {
-    margin: 40px 0 0;
+    margin: 24px 0 0;
   }
 
   &__heights {
@@ -66,6 +67,12 @@
     display: flex;
     overflow-x: scroll;
     overflow-y: hidden;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+      width: 0;
+    }
   }
 
   &__image {
@@ -79,6 +86,11 @@
 
   &__text {
     margin: 40px 0 0;
+  }
+
+  &__slider-wrapper {
+    padding: 0;
+    list-style: none;
   }
 
   &__button {
@@ -112,7 +124,7 @@
       font-size: 55px;
       line-height: 1.09;
       letter-spacing: -0.5px;
-      margin: 54px 0 0;
+      margin: 0;
     }
 
     &__text {
@@ -128,6 +140,7 @@
       grid-column: 1;
       grid-row: 3;
       margin: 84px 0 0;
+
     }
 
     &__image {
@@ -170,7 +183,7 @@
     }
 
     &__button {
-      top: 98.7%;
+      top: 92.4%;
       left: calc(8.3% + 70px);
       right: auto;
 

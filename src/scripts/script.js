@@ -1,4 +1,4 @@
-new  Swiper('.bikes__slider', {
+new Swiper('.bikes__slider', {
   pagination: {
     el: '.bikes__pagination',
     type: 'bullets',
@@ -30,3 +30,12 @@ new  Swiper('.bikes__slider', {
   }
 });
 
+new Swiper('.coatings__slider', {
+  navigation: {
+    nextEl: '.button-left',
+    prevEl: '.button-right',
+  },
+  spaceBetween: 400,
+  slidesPerView: 1,
+  allowTouchMove: false,
+});
