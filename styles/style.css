@@ -674,7 +674,7 @@
 }
 @media screen and (min-width: 600px) {
   .coatings {
-    padding: 1px 0 4.5% 8.3%;
+    padding: 1px 0 5.5% 8.3%;
   }
   .coatings::after {
     display: none;
@@ -736,7 +736,7 @@
     height: 16px;
   }
   .coatings__button {
-    top: 93.7%;
+    top: 93%;
     left: calc(8.3% + 70px);
     right: auto;
   }
@@ -879,7 +879,7 @@
 }
 @media screen and (min-width: 750px) {
   .bikes {
-    padding: 8% 8.4% 11%;
+    padding: 7.1% 8.4% 11%;
   }
   .bikes__heading {
     margin: 0;
