@@ -1,0 +1,11 @@
+.page {
+  @extend %font-family;
+  color: $color--l-m;
+  background-color: $color--bg--l-m;
+  transition: all 300ms ease-in-out;
+
+  &_theme_dark {
+    color: $color--d-m;
+    background-color: $color--bg--d-m;
+  }
+}
