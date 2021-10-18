@@ -1102,14 +1102,10 @@
   background-color: transparent;
   border: none;
 }
-.footer__input:focus::-webkit-input-placeholder {
-  color: transparent;
-}
 .footer__input:focus ~ .footer__submit {
-  display: block;
+  opacity: 1;
 }
 .footer__submit {
-  display: none;
   font-size: 13px;
   font-weight: 500;
   line-height: 2.15;
@@ -1117,6 +1113,8 @@
   border: none;
   background-color: transparent;
   color: inherit;
+  z-index: 100;
+  opacity: 0;
 }
 .footer__inner {
   display: -webkit-box;

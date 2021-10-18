@@ -50,6 +50,22 @@ const bikesSliderWrapper = document.querySelector(".bikes__slider-wrapper");
 const desctopHighwayButton = document.querySelector("#desc-highway-button");
 const desctopGravelButton = document.querySelector("#desc-gravel-button");
 const desctopTtButton = document.querySelector("#desc-tt-button");
+const burgerButton = document.querySelector(".burger-btn__label");
+const header = document.querySelector(".header");
+const headerToggle = header.querySelector(".toggle");
+const headerToggleLabel = header.querySelector(".toggle__label");
+const headerBurgerInput = header.querySelector(".burger-btn__input")
+const page = document.querySelector(".page");
+const buttonLeft = document.querySelector(".button-left");
+const buttonRight = document.querySelector(".button-right");
+const footer = document.querySelector(".footer");
+const footerLicense = footer.querySelector(".footer__license");
+const headerNavLinks = document.querySelectorAll(".header__nav-link")
+const footerToggle = footer.querySelector(".toggle");
+const footerToggleLabel = footer.querySelector(".toggle__label");
+const footerForm = document.forms.email;
+const footerInput = footerForm.input;
+const footerInputPlaceholder = footerInput.placeholder;
 
 select.addEventListener('change', function() {
   if(this.value === 'highway') {
@@ -88,19 +104,6 @@ desctopTtButton.addEventListener("click", function(){
   desctopTtButton.classList.add('bikes__nav-element_active');
 });
 
-const burgerButton = document.querySelector(".burger-btn__label");
-const header = document.querySelector(".header");
-const headerToggle = header.querySelector(".toggle");
-const headerToggleLabel = header.querySelector(".toggle__label");
-const headerBurgerInput = header.querySelector(".burger-btn__input")
-const page = document.querySelector(".page");
-const buttonLeft = document.querySelector(".button-left");
-const buttonRight = document.querySelector(".button-right");
-const footer = document.querySelector(".footer");
-const footerLicense = footer.querySelector(".footer__license");
-const headerNavLinks = document.querySelectorAll(".header__nav-link")
-
-
 burgerButton.addEventListener("click", function() {
   header.classList.toggle("header_opened");
   headerToggle.classList.toggle("toggle_opened")
@@ -124,9 +127,6 @@ headerToggleLabel.addEventListener("click", function() {
   footerLicense.classList.toggle("footer__license_theme_dark");
 });
 
-const footerToggle = footer.querySelector(".toggle");
-const footerToggleLabel = footer.querySelector(".toggle__label");
-
 footerToggleLabel.addEventListener("click", function() {
   page.classList.toggle("page_theme_dark");
   footerToggleLabel.classList.toggle("toggle__label_theme_dark");
@@ -137,16 +137,23 @@ footerToggleLabel.addEventListener("click", function() {
   footerLicense.classList.toggle("footer__license_theme_dark");
 })
 
-// const footerInput = document.querySelector(".footer__input");
-// const footerForm = document.querySelector(".footer__form");
+footerInput.addEventListener("focus", function(){
+  footerInput.placeholder = "";
+});
 
-// console.log(footerForm)
+footerInput.addEventListener("blur", function(){
+  footerInput.placeholder = footerInputPlaceholder;
+});
 
-// footerForm.addEventListener("submit", function(e) {
-//   e.preventDefault();
-//   footerForm.value = "";
-//   footerInput.placeholder = "Круто!";
-// })
+footerForm.addEventListener("submit", function(e) {
+  if(!footerInput.value){
+  e.preventDefault();
+  } else{
+    e.preventDefault();
+    footerInput.value = "";
+    footerInput.placeholder = "Круто!";
+  }
+})
 
 
 
