@@ -40,12 +40,19 @@
     font-size: 13px;
     line-height: 2.15;
     opacity: 0.7;
+    color: inherit;
     background-color: transparent;
     border: none;
+    transition: all 200ms ease-in-out;
+
+    &:hover {
+      opacity: 1;
+    }
 
     &:focus {
       ~ .footer__submit {
         opacity: 1;
+        cursor: pointer;
       }
     }
   }
@@ -54,7 +61,7 @@
     font-size: 13px;
     font-weight: 500;
     line-height: 2.15;
-    cursor: pointer;
+    cursor: default;
     border: none;
     background-color: transparent;
     color: inherit;

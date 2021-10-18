@@ -1,6 +1,6 @@
 .coatings {
   position: relative;
-  padding: 1px 18px 80px;
+  padding: 1px 18px 64px;
   margin: auto;
   max-width: 1440px;
   overflow-x: hidden;
@@ -85,7 +85,7 @@
   }
 
   &__text {
-    margin: 40px 0 0;
+    margin: 22px 0 0;
   }
 
   &__slider-wrapper {
@@ -112,7 +112,7 @@
   }
 
   @media screen and (min-width: 600px) {
-    padding: 60px 0 60px 8.3%;
+    padding: 1px 0 4.5% 8.3%;
 
     &::after {
       display: none;
@@ -189,7 +189,7 @@
     }
 
     &__button {
-      top: 92.4%;
+      top: 93.7%;
       left: calc(8.3% + 70px);
       right: auto;
 
